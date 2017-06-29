@@ -1,0 +1,65 @@
+class Header extends React.Component{
+  render(){
+    return(
+      <div><header>Pocket</header></div>
+    )
+  }
+}
+class SideBar extends React.Component{
+  render(){
+    return(
+        <div className="profile">
+          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS4VaElFnHr3b2bfG5OZWZK24fbHOB43-yem7Plh3SELZRCrc64hNsLblI"/>
+          <div className="settings"><a href="#">Settings</a></div>
+        <div className="collections"><a href="#">Collections</a></div>
+        <div className="resources"><a href="#">Resources</a></div>
+        </div>
+      
+    )
+  }
+}
+
+class MainSection extends React.Component{
+  render(){
+    return(
+      <div className="main">
+        <div>
+        <input type="text" placeholder="Add Collection here"/>
+          <button>Add</button>
+        </div>
+        <div className="panel panel-default">
+          <div className="panel-heading title text-left">My Collection</div>
+          <div className="panel-body img-bar">
+          <img className="" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTMZhSPZQF0ourl_MJJ96ByxvubN7mJfJ2rm2Zbq8-AQHEHTybpfw"/>
+            <img className="" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQzqmxTVu1XdbEof7qcOGf_nG2FafnqRKBSlLqMMelVh12rSvx5VA"/>
+            <img className="" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSu80ZQePdKBckc1YGadTzQ3LNZrkmxt1Q86yuVRFtSKbsZvrdPZA"/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGMyf7-LaD-mrmau-ojDGe8RostprKmOEMo2Idjlql0URB9M7X"/>
+          </div>
+        </div>
+        <div className="panel panel-default">
+          <div className="panel-heading title text-left">Collaborate</div>
+          <div className="panel-body">
+          <img className="" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSbZpNz3E0rPZqNx8Ue2ThKcCeqC97-kffW2DNCgXpZIK2MYbUkKw"/>
+            <img className="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYOJ4CKXJ4WMwJTKhp5encKKSR3KaGIY0pGsRqiIkkL-Qjboo9"/>
+            <img className="" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQInaYgdTxgiqj46UElHOVHTpSAfFq71xn244wa-qMesGDyYU8o2g"/>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+class Pocket extends React.Component{
+  render(){
+    return(
+        <div>
+        <Header />
+        <div className="rowC">
+          <SideBar/>
+          <MainSection/>
+        </div>
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<Pocket />,document.getElementById('container'));
